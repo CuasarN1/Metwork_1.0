@@ -2,46 +2,10 @@ from math import sqrt
 from PIL import Image
 from random import choice
 
-path = "yes/2020_02_17_11_59_22.png"
-
-
-def zero(h, per):
-    for v in h.values():
-        if v < per:
-            return True
-    return False
-
-
-def pick(h, per):
-    while True:
-        key = choice(list(h.keys()))
-        if h[key] < per:
-            return key
-
-
-def pack(h, per):
-    while zero(h, per):
-        key = pick(h, per)
-        val = h[key]
-        col = similar(h, key)
-        if h[col] > val:
-            h[col] += h.pop(key)
-        else:
-            h[key] += h.pop(col)
-
-
-def similar(h, col):
-    min_dist = 442
-    closest = (-1, -1, -1)
-    for k in h.keys():
-        if k != col:
-            dist = sqrt(pow(k[0] - col[0], 2) +
-                        pow(k[1] - col[1], 2) +
-                        pow(k[2] - col[2], 2))
-            if dist < min_dist:
-                min_dist = dist
-                closest = k
-    return closest
+path = "no/2020_02_17_11_53_37.png"
+eps = 15
+min_col = 80
+max_col = 600
 
 
 try:
@@ -50,6 +14,8 @@ try:
 except FileNotFoundError:
     print("Файл не найден")
 
+img = img.convert('P', palette=Image.ADAPTIVE, colors = eps).convert("RGB")
+img.show()
 mode = img.mode
 size = img.size
 x, y = size[0], size[1]
@@ -69,7 +35,6 @@ for i in range(x):
         else:
             ColorTable[clr] += 1
 
-pack(ColorTable, percent)
 sortCLR = sorted(ColorTable.items(), reverse=True, key=lambda kv: kv[1])
 print(total, len(sortCLR), sortCLR)
 
