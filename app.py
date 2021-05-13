@@ -2,6 +2,7 @@ from math import sqrt
 from PIL import Image
 import PySimpleGUI as sg
 from os import path
+import traceback
 
 
 def diff(arr):
@@ -30,8 +31,6 @@ def warn(error):
         print('Выберите файл!\n')
     elif error == 'exist':
         print('Файл по указанному пути не найден!\n')
-    elif error == 'critical':
-        print('Произошла ошибка!\nПерезагрузите приложение.\n')
 
 
 def percentage(num, guess, mode) -> str:
@@ -73,8 +72,10 @@ while True:
             else:
                 try:
                     Image.open(values[0], 'r').show()
-                except Exception:
-                    warn('critical')
+                except Exception as e:
+                    sg.popup_error('Critical error!', e)
+                    break
+
     if event == '-BTN-':
         if not values[0]:
             warn('file')
@@ -115,5 +116,7 @@ while True:
                         print('\nВероятность предположения:', percentage(most, guess, mode))  # , round(most, 3))
                     print(69 * '_', end='\n\n')
 
-                except Exception:
-                    warn('\nПроизошла критическая ошибка!')
+                except Exception as e:
+                    # tb = traceback.format_exc()  # debug
+                    sg.popup_error('Critical error!', e)
+                    break
