@@ -2,7 +2,6 @@ from math import sqrt
 from PIL import Image
 import PySimpleGUI as sg
 from os import path
-import traceback
 
 
 def diff(arr):
@@ -118,5 +117,5 @@ while True:
 
                 except Exception as e:
                     # tb = traceback.format_exc()  # debug
-                    sg.popup_error('Critical error!', e)
+                    sg.popup_error('Critical error!', e)  # ('Critical error!', e, tb)
                     break
