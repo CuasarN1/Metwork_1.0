@@ -2,10 +2,220 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efed3d1-60f6-4a05-85fd-b6528e239125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/NeuroMed.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NeuroMed.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/no/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/02_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/03_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/03_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/04_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/04_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/04_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/05_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/05_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/05_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/05_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/06_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/06_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/06_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/06_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/06_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/07_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/07_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/07_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/07_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/07_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/07_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/08_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/09_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/10_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/11_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/12_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/13_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/14_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/15_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/16_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/17_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/18_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/yes/19_18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/merge.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new.py" beforeDir="false" afterPath="$PROJECT_DIR$/new.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +233,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nkUaBLgcfW0jq8ky7NRZnmNE9s" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/Yofi/Python" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.merge">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NeuroMed" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +290,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="merge" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NeuroMed" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/merge.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NeuroMed" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,9 +334,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.merge" />
+        <item itemvalue="Python.new" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.new" />
       </list>
     </recent_temporary>
   </component>
@@ -120,31 +355,48 @@
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/CourseWork2" />
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1630843947080">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1630856219775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1630843947080" />
-    <state width="1515" height="202" key="GridCell.Tab.0.bottom" timestamp="1630844233097">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1630856219775" />
+    <state width="1515" height="202" key="GridCell.Tab.0.bottom" timestamp="1630862118088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="202" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630844233097" />
-    <state width="1515" height="202" key="GridCell.Tab.0.center" timestamp="1630844233096">
+    <state width="1515" height="202" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630862118088" />
+    <state width="1515" height="202" key="GridCell.Tab.0.center" timestamp="1630862118087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="202" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1630844233096" />
-    <state width="1515" height="202" key="GridCell.Tab.0.left" timestamp="1630844233096">
+    <state width="1515" height="202" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1630862118087" />
+    <state width="1515" height="202" key="GridCell.Tab.0.left" timestamp="1630862118087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="202" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1630844233096" />
-    <state width="1515" height="202" key="GridCell.Tab.0.right" timestamp="1630844233096">
+    <state width="1515" height="202" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1630862118087" />
+    <state width="1515" height="202" key="GridCell.Tab.0.right" timestamp="1630862118088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="202" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1630844233096" />
+    <state width="1515" height="202" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1630862118088" />
+    <state width="1515" height="230" key="GridCell.Tab.1.bottom" timestamp="1630861345826">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="230" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630861345826" />
+    <state width="1515" height="230" key="GridCell.Tab.1.center" timestamp="1630861345826">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="230" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1630861345826" />
+    <state width="1515" height="230" key="GridCell.Tab.1.left" timestamp="1630861345826">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="230" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1630861345826" />
+    <state width="1515" height="230" key="GridCell.Tab.1.right" timestamp="1630861345826">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="230" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1630861345826" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1630843975314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -155,8 +407,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>90</line>
+          <line>91</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/new.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
