@@ -9,6 +9,7 @@ min_col = 50
 max_col = 650
 borders = range(min_col, max_col)
 
+
 def test(arr, total, mode):
     p = 100.00
     ans = {}
