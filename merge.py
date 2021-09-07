@@ -3,9 +3,15 @@ import glob
 
 
 path = 'dataset/no/'
+All = False
 
 files = glob.glob(path + '*.png')
-names = [file.split('\\')[1].replace('.png', '') for file in files]
+if All:
+    names = [file.split('\\')[1].replace('.png', '') for file in files]
+else:
+    files = [file for file in files if '_' in file]
+    del files[1::2]
+    names = [file.split('\\')[1].replace('.png', '') for file in files]
 length = len(files)
 cnt = 0
 for i in range(length-1):
