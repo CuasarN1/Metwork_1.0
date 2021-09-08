@@ -2,7 +2,7 @@ from PIL import Image
 import glob
 
 
-path = 'dataset/no/'
+path = 'dataset/yes/'
 All = False
 
 files = glob.glob(path + '*.png')
