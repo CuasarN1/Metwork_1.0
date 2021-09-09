@@ -2,6 +2,7 @@ from math import sqrt
 from PIL import Image
 import PySimpleGUI as sg
 from os import path
+import tensorflow as tf
 
 
 def diff(arr):
