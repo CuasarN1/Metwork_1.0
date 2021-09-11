@@ -50,11 +50,11 @@ def percentage(num, guess, mode) -> str:
 
 
 def neuro(file):
-    # execution_path = os.getcwd()
+    execution_path = os.getcwd()
     prediction = CustomImageClassification()
     prediction.setModelTypeAsResNet50()
-    prediction.setModelPath('061-0.7933.h5')
-    prediction.setJsonPath('model_class.json')
+    prediction.setModelPath(execution_path + "\model_ex-002_acc-0.984336.h5")
+    prediction.setJsonPath(execution_path + "\model_class.json")
     prediction.loadModel(num_objects=2)
 
     predictions, probabilities = prediction.predictImage(file, result_count=2)
@@ -127,7 +127,7 @@ while True:
                     for eachPrediction, eachProbability in result:
                         print(eachPrediction, " : ", eachProbability)
 
-                    algo(file)
+                    # algo(file)
 
                     print(69 * '_', end='\n\n')
 
