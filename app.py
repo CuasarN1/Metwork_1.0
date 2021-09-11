@@ -1,8 +1,8 @@
 from math import sqrt
 from PIL import Image
 import PySimpleGUI as sg
-from os import path
-import tensorflow as tf
+import os
+from imageai.Classification.Custom import CustomImageClassification
 
 
 def diff(arr):
@@ -23,7 +23,10 @@ def distance(img):
 
 
 def exist(val) -> bool:
-    return path.isfile(val)
+    try:
+        return os.path.isfile(val)
+    except Exception as e:
+        sg.popup_error('Critical error!', e)
 
 
 def warn(error):
@@ -46,74 +49,86 @@ def percentage(num, guess, mode) -> str:
     return str(round(s, 3)) + '%'
 
 
+def neuro(file):
+    # execution_path = os.getcwd()
+    prediction = CustomImageClassification()
+    prediction.setModelTypeAsResNet50()
+    prediction.setModelPath('061-0.7933.h5')
+    prediction.setJsonPath('model_class.json')
+    prediction.loadModel(num_objects=2)
+
+    predictions, probabilities = prediction.predictImage(file, result_count=2)
+    return zip(predictions, probabilities)
+
+
+def algo(file):
+    img = Image.open(file, 'r')
+    r, g, b = img.split()
+    j = 1.45
+    r = r.point(lambda i: i * j)
+    g = g.point(lambda i: i * j)
+    b = b.point(lambda i: i * j)
+    result = Image.merge('RGB', (r, g, b))
+    most = abs(min(distance(result)) - min(distance(img)))
+    mode = 7.5  # 9.0 (day)
+    print('Файл:', file)
+    print('\nПредположение:', end=' ')
+    if most == mode:
+        print('не удалось сделать предположение по данной фотографии\n')
+        print('Попробуйте переключить режим или загрузите другое фото.')
+    else:
+        if most > mode:
+            print('на снимке скорее всего ЕСТЬ отклонение от нормы')
+            guess = True
+        else:
+            print('на снимке скорее всего НЕТ отклонения от нормы')
+            guess = False
+        print('\nВероятность предположения:', percentage(most, guess, mode))  # , round(most, 3))
+
+
 layout = [
     [sg.Text('Файл'), sg.InputText(), sg.FileBrowse('Открыть'), sg.Button('Показать', key='-SHOW-')],
     [sg.Output(key='-OUT-', size=(69, 20))],
-    [sg.Button('Анализ', key='-BTN-', )
-     , sg.Checkbox('Ночной режим')
-     , sg.Text(60 * ' '), sg.Button('Очистить', key='-CLR-')]
+    [sg.Button('Анализ', key='-BTN-', ), sg.Text(91 * ' '), sg.Button('Очистить', key='-CLR-')]
 ]
 
 window = sg.Window('Меню', layout)
 
 while True:
     event, values = window.read()
+    file = values[0]
     # print(event, values) # debug
     if event in (None, 'Exit'):
         break
     if event == '-CLR-':
         window['-OUT-'].update('')
     if event == '-SHOW-':
-        if not values[0]:
+        if not file:
             warn('file')
         else:
-            if not exist(values[0]):
+            if not exist(file):
                 warn('exist')
             else:
                 try:
-                    Image.open(values[0], 'r').show()
+                    Image.open(file, 'r').show()
                 except Exception as e:
                     sg.popup_error('Critical error!', e)
                     break
 
     if event == '-BTN-':
-        if not values[0]:
+        if not file:
             warn('file')
         else:
-            if not exist(values[0]):
+            if not exist(file):
                 warn('exist')
             else:
                 try:
-                    if values[1]:
-                        mode = 7.5
-                    else:
-                        mode = 9.0
-                    img = Image.open(values[0], 'r')
-                    r, g, b = img.split()
-                    j = 1.45
-                    r = r.point(lambda i: i * j)
-                    g = g.point(lambda i: i * j)
-                    b = b.point(lambda i: i * j)
-                    result = Image.merge('RGB', (r, g, b))
-                    most = abs(min(distance(result)) - min(distance(img)))
-                    print('Файл:', values[0])
-                    print('\nПредположение:', end=' ')
-                    if most == mode:
-                        print('не удалось сделать предположение по данной фотографии\n')
-                        print('Попробуйте переключить режим или загрузите другое фото.')
-                    else:
-                        if most > mode:
-                            print('на снимке скорее всего ЕСТЬ отклонение от нормы')
-                            guess = True
-                        else:
-                            print('на снимке скорее всего НЕТ отклонения от нормы')
-                            guess = False
-                        print('\nРежим:', end=' ')
-                        if values[1]:
-                            print('ночной')
-                        else:
-                            print('дневной')
-                        print('\nВероятность предположения:', percentage(most, guess, mode))  # , round(most, 3))
+                    result = neuro(file)
+                    for eachPrediction, eachProbability in result:
+                        print(eachPrediction, " : ", eachProbability)
+
+                    algo(file)
+
                     print(69 * '_', end='\n\n')
 
                 except Exception as e:
