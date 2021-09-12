@@ -52,7 +52,7 @@ def percentage(num, guess, mode) -> str:
 def neuro(file):
     prediction = CustomImageClassification()
     prediction.setModelTypeAsResNet50()
-    prediction.setModelPath('model_graph(2nd).h5')
+    prediction.setModelPath('model_graph.h5')
     prediction.setJsonPath('model_class.json')
     prediction.loadModel(num_objects=2)
 
