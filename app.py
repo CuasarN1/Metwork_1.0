@@ -50,15 +50,18 @@ def percentage(num, guess, mode) -> str:
 
 
 def neuro(file):
-    execution_path = os.getcwd()
     prediction = CustomImageClassification()
     prediction.setModelTypeAsResNet50()
-    prediction.setModelPath(execution_path + "\model_ex-002_acc-0.984336.h5")
-    prediction.setJsonPath(execution_path + "\model_class.json")
+    prediction.setModelPath('model_graph(2nd).h5')
+    prediction.setJsonPath('model_class.json')
     prediction.loadModel(num_objects=2)
 
-    predictions, probabilities = prediction.predictImage(file, result_count=2)
-    return zip(predictions, probabilities)
+    predictions, probabilities = prediction.classifyImage(file, result_count=2)
+    result = probabilities[0]
+    if result != 100.0:
+        print_r(result != 50.0, predictions[0] == 'yes', result, True, file)
+    else:
+        algo(file)
 
 
 def algo(file):
@@ -71,19 +74,32 @@ def algo(file):
     result = Image.merge('RGB', (r, g, b))
     most = abs(min(distance(result)) - min(distance(img)))
     mode = 7.5  # 9.0 (day)
-    print('Файл:', file)
+    guess = most > mode
+    print_r(most != mode, guess, percentage(most, guess, mode), False, file)
+
+
+def print_r(ok, res, percent, mode, f):
+    text = window['-OUT-'].get()
+    window['-OUT-'].update('')
+    print(text.replace('Подождите, пожалуйста...\n', '').replace('Подождите, пожалуйста...', '')
+              .replace('Выберите файл!\n\n', '').replace('Файл по указанному пути не найден!\n\n', ''), end='')
+    print('Файл:', f)
     print('\nПредположение:', end=' ')
-    if most == mode:
+    if not ok:
         print('не удалось сделать предположение по данной фотографии\n')
         print('Попробуйте переключить режим или загрузите другое фото.')
     else:
-        if most > mode:
+        if res:
             print('на снимке скорее всего ЕСТЬ отклонение от нормы')
-            guess = True
         else:
             print('на снимке скорее всего НЕТ отклонения от нормы')
-            guess = False
-        print('\nВероятность предположения:', percentage(most, guess, mode))  # , round(most, 3))
+        print('\nВероятность предположения:', percent)
+        print('\nРежим анализа: ', end='')
+        if mode:
+            print('нейронный')
+        else:
+            print('алгоритмический')
+        print(69 * '_', end='\n\n')
 
 
 layout = [
@@ -92,7 +108,7 @@ layout = [
     [sg.Button('Анализ', key='-BTN-', ), sg.Text(91 * ' '), sg.Button('Очистить', key='-CLR-')]
 ]
 
-window = sg.Window('Меню', layout)
+window = sg.Window('Metwork', layout)
 
 while True:
     event, values = window.read()
@@ -123,13 +139,8 @@ while True:
                 warn('exist')
             else:
                 try:
-                    result = neuro(file)
-                    for eachPrediction, eachProbability in result:
-                        print(eachPrediction, " : ", eachProbability)
-
-                    # algo(file)
-
-                    print(69 * '_', end='\n\n')
+                    print('Подождите, пожалуйста...', end='')
+                    neuro(file)
 
                 except Exception as e:
                     # tb = traceback.format_exc()  # debug
