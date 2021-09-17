@@ -36,7 +36,7 @@ def warn(error):
         print('Файл по указанному пути не найден!\n')
 
 
-def percentage(num, guess, mode) -> str:
+def percentage(num, guess, mode) -> float:
     if guess:
         s = num
         scale = 20 - mode
@@ -46,22 +46,19 @@ def percentage(num, guess, mode) -> str:
     else:
         s = 100 - (num / mode * 100)
 
-    return str(round(s, 3)) + '%'
+    return s
 
 
 def neuro(file):
     prediction = CustomImageClassification()
-    prediction.setModelTypeAsResNet50()
+    prediction.setModelTypeAsInceptionV3()
     prediction.setModelPath('model_graph.h5')
     prediction.setJsonPath('model_class.json')
     prediction.loadModel(num_objects=2)
 
     predictions, probabilities = prediction.classifyImage(file, result_count=2)
-    result = probabilities[0]
-    if result != 100.0:
-        print_r(result != 50.0, predictions[0] == 'yes', result, True, file)
-    else:
-        algo(file)
+    percent = probabilities[0]
+    return [percent != 50.0, predictions[0] == 'yes', percent]
 
 
 def algo(file):
@@ -73,12 +70,48 @@ def algo(file):
     b = b.point(lambda i: i * j)
     result = Image.merge('RGB', (r, g, b))
     most = abs(min(distance(result)) - min(distance(img)))
-    mode = 7.5  # 9.0 (day)
-    guess = most > mode
-    print_r(most != mode, guess, percentage(most, guess, mode), False, file)
+    d, n = 9.0, 7.5
+    ok, ok_d, ok_n = True, most != d, most != n
+    guess_d, guess_n = most > d, most > n
+    guess = guess_d and guess_n
+    per_d, per_n = percentage(most, guess_d, d), percentage(most, guess_n, n)
+    avg = (per_d + per_n) / 2
+    dist = max(per_d, per_n) - min(per_d, per_n)
+    if guess:
+        percent = avg + dist * 0.05
+    else:
+        if (ok_d and ok_n) or not ok_d:
+            percent = avg - dist * 0.15
+        else:
+            ok = False
+            percent = 0.0
+
+    return [ok, guess, percent]
 
 
-def print_r(ok, res, percent, mode, f):
+def calc(file):
+    n = neuro(file)
+    a = algo(file)
+    ok = a[0] or n[0]
+    if ok:
+        if not a[0]:
+            print_r(n[0], n[1], n[2], file, True)
+        if not n[0]:
+            print_r(a[0], a[1], a[2], file, False)
+
+        if a[1] == n[1]:
+            print_r(ok, a[1], (a[2]+n[2])/2, file)
+        else:
+            if not a[1]:
+                print_r(n[0], n[1], n[2], file)
+            if not n[1]:
+                print_r(a[0], a[1], a[2], file)
+
+    else:
+        print_r(ok, False, 0.0, file)
+
+
+def print_r(ok, res, percent, f, mode=None):
     text = window['-OUT-'].get()
     window['-OUT-'].update('')
     print(text.replace('Подождите, пожалуйста...\n', '').replace('Подождите, пожалуйста...', '')
@@ -93,12 +126,11 @@ def print_r(ok, res, percent, mode, f):
             print('на снимке скорее всего ЕСТЬ отклонение от нормы')
         else:
             print('на снимке скорее всего НЕТ отклонения от нормы')
-        print('\nВероятность предположения:', percent)
-        print('\nРежим анализа: ', end='')
-        if mode:
-            print('нейронный')
-        else:
-            print('алгоритмический')
+        print('\nВероятность предположения:', str(round(percent, 3)) + '%')
+        if mode is True:
+            print('\nРежим анализа: нейронный')
+        elif mode is False:
+            print('\nРежим анализа: алгоритмический')
         print(69 * '_', end='\n\n')
 
 
@@ -140,7 +172,7 @@ while True:
             else:
                 try:
                     print('Подождите, пожалуйста...', end='')
-                    neuro(file)
+                    calc(file)
 
                 except Exception as e:
                     # tb = traceback.format_exc()  # debug
