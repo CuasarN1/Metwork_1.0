@@ -4,21 +4,17 @@ from PIL import Image
 import glob
 
 
-def diff(arr):
+def distance(img):
+    img = img.convert('P', palette=Image.ADAPTIVE, colors=15).convert("RGB")
+    arr = Image.Image.getcolors(img)
+
     ans = []
     n = len(arr)
     for i in range(n - 1):
         for j in range(i + 1, n):
             f, s = arr[i][1], arr[j][1]
             ans.append(sqrt(pow(f[0] - s[0], 2) + pow(f[1] - s[1], 2) + pow(f[2] - s[2], 2)))
-    return ans
-
-
-def distance(img):
-    img = img.convert('P', palette=Image.ADAPTIVE, colors=15).convert("RGB")
-    colors = Image.Image.getcolors(img)
-
-    return sorted(diff(colors))
+    return sorted(ans)
 
 
 def percentage(num, guess, mode) -> float:
@@ -43,7 +39,7 @@ def algo(file):
     b = b.point(lambda i: i * j)
     result = Image.merge('RGB', (r, g, b))
     most = abs(min(distance(result)) - min(distance(img)))
-    d, n = 9.0, 7.5
+    d, n = 9.0, 7.0  # custom n
     ok, ok_d, ok_n = True, most != d, most != n
     guess_d, guess_n = most > d, most > n
     guess = guess_d and guess_n
@@ -65,7 +61,7 @@ def algo(file):
 def neuro(file):
     prediction = CustomImageClassification()
     prediction.setModelTypeAsInceptionV3()
-    prediction.setModelPath('model_graph.h5')
+    prediction.setModelPath('model_graph(inception).h5')
     prediction.setJsonPath('model_class.json')
     prediction.loadModel(num_objects=2)
 
@@ -104,7 +100,7 @@ for f in folders:
     eCount, yCount, nCount = 0, 0, 0
     yPer, nPer = 0, 0
     for file in filenames:
-        result = neuro(file)
+        result = calc(file)
         if not result[0]:
             eCount += 1
         else:
@@ -115,8 +111,13 @@ for f in folders:
                 nCount += 1
                 nPer += result[2]
 
+    yAvg, nAvg = 0, 0
+    if yCount != 0:
+        yAvg = yPer / yCount
+    if nCount != 0:
+        nAvg = nPer / nCount
     print('Path: ', path)
-    print('Yes: ', yCount, yPer / yCount)
-    print('No: ', nCount, nPer / nCount)
+    print('Yes: ', yCount, yAvg)
+    print('No: ', nCount, nAvg)
     print('Error: ', eCount)
     print()

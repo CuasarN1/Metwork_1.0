@@ -5,21 +5,17 @@ import os
 from imageai.Classification.Custom import CustomImageClassification
 
 
-def diff(arr):
+def distance(img):
+    img = img.convert('P', palette=Image.ADAPTIVE, colors=15).convert("RGB")
+    arr = Image.Image.getcolors(img)
+
     ans = []
     n = len(arr)
     for i in range(n - 1):
         for j in range(i + 1, n):
             f, s = arr[i][1], arr[j][1]
             ans.append(sqrt(pow(f[0] - s[0], 2) + pow(f[1] - s[1], 2) + pow(f[2] - s[2], 2)))
-    return ans
-
-
-def distance(img):
-    img = img.convert('P', palette=Image.ADAPTIVE, colors=15).convert("RGB")
-    colors = Image.Image.getcolors(img)
-
-    return sorted(diff(colors))
+    return sorted(ans)
 
 
 def exist(val) -> bool:
@@ -52,7 +48,7 @@ def percentage(num, guess, mode) -> float:
 def neuro(file):
     prediction = CustomImageClassification()
     prediction.setModelTypeAsInceptionV3()
-    prediction.setModelPath('model_graph.h5')
+    prediction.setModelPath('model_graph(inception).h5')
     prediction.setJsonPath('model_class.json')
     prediction.loadModel(num_objects=2)
 
