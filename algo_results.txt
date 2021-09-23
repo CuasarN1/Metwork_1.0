@@ -113,3 +113,17 @@ Yes:  54 49.89960172453064
 No:  156 64.04346714580187
 Error:  0
 ----------------------------
+
+
+**Algo + InceptionV3** (initial dataset)
+Yes folder: (100.0%)
+Yes:  19 54.09120889027591
+No:  0 0
+Error:  0
+
+No folder: (53.8%)
+Path:  F:\\PyCharm\\NeuroMed\\CourseWork2\dataset\\initial\\no\*
+Yes:  7 71.03911638259888
+No:  13 63.17059189457406
+Error:  0
+----------------------------

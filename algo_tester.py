@@ -39,7 +39,7 @@ def algo(file):
     b = b.point(lambda i: i * j)
     result = Image.merge('RGB', (r, g, b))
     most = abs(min(distance(result)) - min(distance(img)))
-    d, n = 9.0, 7.0  # custom n
+    d, n = 9.0, 7.5  # custom n
     ok, ok_d, ok_n = True, most != d, most != n
     guess_d, guess_n = most > d, most > n
     guess = guess_d and guess_n
@@ -95,7 +95,7 @@ def calc(file):
 folders = ['yes', 'no']
 
 for f in folders:
-    path = r'F:\\PyCharm\\NeuroMed\\CourseWork2\dataset\\1st_merge\\' + f + '\\*'
+    path = r'F:\\PyCharm\\NeuroMed\\CourseWork2\dataset\\initial\\' + f + '\\*'
     filenames = glob.glob(path)
     eCount, yCount, nCount = 0, 0, 0
     yPer, nPer = 0, 0
