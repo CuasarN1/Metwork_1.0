@@ -89,14 +89,15 @@ def calc(file):
     n = neuro(file)
     a = algo(file)
     ok = a[0] or n[0]
+    ok = False
     if ok:
         if not a[0]:
             print_r(n[0], n[1], n[2], file, True)
-        if not n[0]:
+        elif not n[0]:
             print_r(a[0], a[1], a[2], file, False)
 
-        if a[1] == n[1]:
-            print_r(ok, a[1], (a[2]+n[2])/2, file)
+        elif a[1] == n[1]:
+            print_r(ok, a[1], (a[2] + n[2]) / 2, file)
         else:
             if not a[1]:
                 print_r(n[0], n[1], n[2], file)
@@ -107,33 +108,37 @@ def calc(file):
         print_r(ok, False, 0.0, file)
 
 
-def print_r(ok, res, percent, f, mode=None):
+def print_r(ok, res, percent, f, mode=True):
     text = window['-OUT-'].get()
     window['-OUT-'].update('')
     print(text.replace('Подождите, пожалуйста...\n', '').replace('Подождите, пожалуйста...', '')
               .replace('Выберите файл!\n\n', '').replace('Файл по указанному пути не найден!\n\n', ''), end='')
-    print('Файл:', f)
-    print('\nПредположение:', end=' ')
+    print('File:', f)
+    print('\nGuess:', end=' ')
     if not ok:
-        print('не удалось сделать предположение по данной фотографии\n')
-        print('Попробуйте переключить режим или загрузите другое фото.')
+        # print('не удалось сделать предположение по данной фотографии\n')
+        # print('Загрузите другое фото.')
+        print('unable to detect the image\n')
+        print('Please, check the image quality.')
     else:
         if res:
-            print('на снимке скорее всего ЕСТЬ отклонение от нормы')
+            # print('на снимке скорее всего ЕСТЬ отклонение от нормы')
+            print('image contains an abnormalities')
         else:
-            print('на снимке скорее всего НЕТ отклонения от нормы')
-        print('\nВероятность предположения:', str(round(percent, 3)) + '%')
+            # print('на снимке скорее всего НЕТ отклонения от нормы')
+            print('image does not contain abnormalities')
+        print('\nPercentage:', str(round(percent, 3)) + '%')
         if mode is True:
-            print('\nРежим анализа: нейронный')
+            print('\nAnalysis mode: neural (default)')
         elif mode is False:
-            print('\nРежим анализа: алгоритмический')
-        print(69 * '_', end='\n\n')
+            print('\nAnalysis mode: image correction')
+    print(62 * '_', end='\n\n')
 
 
 layout = [
-    [sg.Text('Файл'), sg.InputText(), sg.FileBrowse('Открыть'), sg.Button('Показать', key='-SHOW-')],
-    [sg.Output(key='-OUT-', size=(69, 20))],
-    [sg.Button('Анализ', key='-BTN-', ), sg.Text(91 * ' '), sg.Button('Очистить', key='-CLR-')]
+    [sg.Text('File'), sg.InputText(), sg.FileBrowse('Open'), sg.Button('Show', key='-SHOW-')],
+    [sg.Output(key='-OUT-', size=(62, 20))],
+    [sg.Button('Analyse', key='-BTN-', ), sg.Text(84 * ' '), sg.Button('Clear', key='-CLR-')]
 ]
 
 window = sg.Window('Metwork', layout)
